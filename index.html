@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit Crew | Команда профессиональных разработчиков</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts и Font Awesome подключаются через CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Прелоадер (анимированный) -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">Commit<span>Crew</span></div>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-accent">Commit</span>Crew
+            </div>
+
+            <!-- Переключатель языков -->
+            <div class="language-switcher">
+                <button class="language-toggle" id="languageToggle">
+                    <i class="fas fa-globe"></i>
+                    <span class="current-language">RU</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <button class="language-option" data-lang="ru">🇷🇺 Русский</button>
+                    <button class="language-option" data-lang="en">🇬🇧 English</button>
+                    <button class="language-option" data-lang="sv">🇸🇪 Svenska</button>
+                    <button class="language-option" data-lang="uk">🇺🇦 Українська</button>
+                    <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
+                </div>
+            </div>
+
+            <!-- Переключатель темы -->
+            <div class="theme-switcher">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <span class="theme-toggle-ball"></span>
+                </button>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link" data-i18n="nav_about">О нас</a></li>
+                    <li><a href="#services" class="nav-link" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="#process" class="nav-link" data-i18n="nav_process">Процесс</a></li>
+                    <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Проекты</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-primary" data-i18n="nav_contact_btn">Связаться</a>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content animate-on-load">
+                <div class="hero-badge">
+                    <i class="fas fa-code"></i> <span data-i18n="hero_badge">Команда профессиональных разработчиков</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text" data-i18n="hero_title_part1">Commit</span><span class="gradient-text" data-i18n="hero_title_part2">Crew</span>
+                </h1>
+                <p class="hero-description" data-i18n="hero_description">
+                    Разрабатываем веб-сервисы, Telegram и Discord ботов под ключ.<br>
+                    Полный цикл разработки: от анализа до технической поддержки.
+                </p>
+
+                <!-- Улучшенная статистика без JavaScript -->
+                <div class="hero-stats">
+                    <div class="stat-item glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number-wrapper">
+                                <span class="stat-number">5</span>
+                            </div>
+                            <div class="stat-label" data-i18n="stat_experts">экспертов в штате</div>
+                        </div>
+                        <div class="stat-glow"></div>
+                    </div>
+                    <div class="stat-item glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number-wrapper">
+                                <span class="stat-number">40</span>
+                                <span class="stat-plus">+</span>
+                            </div>
+                            <div class="stat-label" data-i18n="stat_projects">реализованных проектов</div>
+                        </div>
+                        <div class="stat-glow"></div>
+                    </div>
+                    <div class="stat-item glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number-wrapper">
+                                <span class="stat-number">3</span>
+                                <span class="stat-plus">+</span>
+                            </div>
+                            <div class="stat-label" data-i18n="stat_years">года на рынке</div>
+                        </div>
+                        <div class="stat-glow"></div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large btn-glow"><span data-i18n="hero_btn_discuss">Обсудить проект</span> <i class="fas fa-arrow-right"></i></a>
+                    <a href="#portfolio" class="btn btn-outline btn-large"><span data-i18n="hero_btn_works">Наши работы</span> <i class="fas fa-eye"></i></a>
+                </div>
+            </div>
+            <div class="hero-image animate-on-load delay-200">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="code-body">
+                        <span class="code-keyword">const</span> <span class="code-variable">crew</span> = {<br>
+                        &nbsp;&nbsp;<span class="code-property">size</span>: <span class="code-number">5</span>,<br>
+                        &nbsp;&nbsp;<span class="code-property">stack</span>: [<span class="code-string">'web'</span>, <span class="code-string">'telegram'</span>, <span class="code-string">'discord'</span>],<br>
+                        &nbsp;&nbsp;<span class="code-property">ready</span>: <span class="code-boolean">true</span><br>
+                        };<br><br>
+                        <span class="code-comment">// <span data-i18n="code_comment">Готовы к сотрудничеству</span></span>
+                    </div>
+                    <div class="code-output">
+                        <div class="output-label">Output:</div>
+                        <div class="output-content">Team ready to build your project! 🚀</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас (подробная команда) -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle-badge" data-i18n="about_badge">Кто мы</span>
+                <h2 class="section-title"><span data-i18n="about_title_part1">Наша</span> <span class="gradient-text" data-i18n="about_title_part2">команда</span></h2>
+                <p class="section-subtitle" data-i18n="about_subtitle">Пять специалистов, каждый отвечает за свое направление</p>
+            </div>
+
+            <!-- Детальная карточка команды -->
+            <div class="team-detailed-grid">
+                <!-- Специалист 1: Пономаренко Станислав -->
+                <div class="team-detailed-card animate-on-scroll">
+                    <div class="team-detailed-header">
+                        <div class="team-detailed-avatar">
+                            <i class="fas fa-user-code"></i>
+                        </div>
+                        <div class="team-detailed-name">
+                            <h3>сергей с1</h3>
+                            <span class="team-detailed-role" data-i18n="role_frontend">Frontend-разработчик</span>
+                        </div>
+                    </div>
+                    <div class="team-detailed-content">
+                        <p class="team-detailed-bio" data-i18n="bio_stanislav">Квалифицированный специалист в области фронтенд-разработки с фокусом на создание пользовательских интерфейсов.</p>
+                        <div class="team-detailed-responsibilities">
+                            <h4 data-i18n="responsibilities">Зона ответственности:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_stanislav_1">Разработка клиентской части</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_stanislav_2">Кросс-браузерная совместимость</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_stanislav_3">Оптимизация интерфейсов</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Специалист 2: Орловский Эдуард -->
+                <div class="team-detailed-card animate-on-scroll delay-100">
+                    <div class="team-detailed-header">
+                        <div class="team-detailed-avatar">
+                            <i class="fas fa-user-paintbrush"></i>
+                        </div>
+                        <div class="team-detailed-name">
+                            <h3>сергей э</h3>
+                            <span class="team-detailed-role" data-i18n="role_frontend_ui">Frontend-разработчик (UX/UI)</span>
+                        </div>
+                    </div>
+                    <div class="team-detailed-content">
+                        <p class="team-detailed-bio" data-i18n="bio_eduard">Специалист по фронтенд-разработке, уделяющий особое внимание пользовательскому опыту и визуальной составляющей.</p>
+                        <div class="team-detailed-responsibilities">
+                            <h4 data-i18n="responsibilities">Зона ответственности:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_eduard_1">Проектирование UX</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_eduard_2">UI/дизайн интерфейсов</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_eduard_3">Адаптивная верстка</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Специалист 3: Пупков Даниил -->
+                <div class="team-detailed-card animate-on-scroll">
+                    <div class="team-detailed-header">
+                        <div class="team-detailed-avatar">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                        <div class="team-detailed-name">
+                            <h3>сергей д</h3>
+                            <span class="team-detailed-role" data-i18n="role_backend">Backend-разработчик</span>
+                        </div>
+                    </div>
+                    <div class="team-detailed-content">
+                        <p class="team-detailed-bio" data-i18n="bio_daniel">Инженер, специализирующийся на проектировании серверной архитектуры и разработке бекенд-логики.</p>
+                        <div class="team-detailed-responsibilities">
+                            <h4 data-i18n="responsibilities">Зона ответственности:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_daniel_1">Серверная архитектура</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_daniel_2">Базы данных</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_daniel_3">Разработка API</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Специалист 4: Кожевник Дмитрий -->
+                <div class="team-detailed-card animate-on-scroll delay-100">
+                    <div class="team-detailed-header">
+                        <div class="team-detailed-avatar">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <div class="team-detailed-name">
+                            <h3>Сергей с </h3>
+                            <span class="team-detailed-role" data-i18n="role_backend_integrations">Backend-разработчик (интеграции)</span>
+                        </div>
+                    </div>
+                    <div class="team-detailed-content">
+                        <p class="team-detailed-bio" data-i18n="bio_dmitry">Разработчик, сосредоточенный на оптимизации серверных процессов и интеграции различных систем.</p>
+                        <div class="team-detailed-responsibilities">
+                            <h4 data-i18n="responsibilities">Зона ответственности:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_dmitry_1">Оптимизация процессов</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_dmitry_2">Интеграция систем</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_dmitry_3">Настройка инфраструктуры</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Специалист 5: Бабченко Ростислав -->
+                <div class="team-detailed-card animate-on-scroll" style="grid-column: span 2;">
+                    <div class="team-detailed-header">
+                        <div class="team-detailed-avatar">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="team-detailed-name">
+                            <h3>Бабченко Ростислав</h3>
+                            <span class="team-detailed-role" data-i18n="role_universal">Универсальный разработчик</span>
+                        </div>
+                    </div>
+                    <div class="team-detailed-content">
+                        <p class="team-detailed-bio" data-i18n="bio_rostislav">Универсальный специалист, который подключается к помощи бекенд- и фронтенд-разработке в случаях, когда коллеги не справляются с объемом работ.</p>
+                        <div class="team-detailed-responsibilities">
+                            <h4 data-i18n="responsibilities">Зона ответственности:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_rostislav_1">Помощь бекенд-разработке</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_rostislav_2">Помощь фронтенд-разработке</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_rostislav_3">Разработка чат-ботов</span></li>
+                                <li><i class="fas fa-check-circle"></i> <span data-i18n="resp_rostislav_4">Взаимозаменяемость</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Технологии -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle-badge" data-i18n="tech_badge">Стек</span>
+                <h2 class="section-title"><span data-i18n="tech_title_part1">Технологический</span> <span class="gradient-text" data-i18n="tech_title_part2">стек</span></h2>
+                <p class="section-subtitle" data-i18n="tech_subtitle">Инструменты, в которых мы эксперты</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item animate-on-scroll"><i class="fab fa-python"></i> Python</div>
+                <div class="tech-item animate-on-scroll delay-50"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="tech-item animate-on-scroll delay-100"><i class="fab fa-node-js"></i> Node.js</div>
+                <div class="tech-item animate-on-scroll delay-150"><i class="fas fa-code"></i> Aiogram</div>
+                <div class="tech-item animate-on-scroll delay-200"><i class="fab fa-discord"></i> Discord.js</div>
+                <div class="tech-item animate-on-scroll"><i class="fas fa-database"></i> PostgreSQL</div>
+                <div class="tech-item animate-on-scroll delay-50"><i class="fas fa-database"></i> MongoDB</div>
+                <div class="tech-item animate-on-scroll delay-100"><i class="fas fa-server"></i> FastAPI</div>
+                <div class="tech-item animate-on-scroll delay-150"><i class="fas fa-bolt"></i> Redis</div>
+                <div class="tech-item animate-on-scroll delay-200"><i class="fas fa-cloud"></i> REST API</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle-badge" data-i18n="services_badge">Что мы делаем</span>
+                <h2 class="section-title"><span data-i18n="services_title_part1">Наши</span> <span class="gradient-text" data-i18n="services_title_part2">услуги</span></h2>
+                <p class="section-subtitle" data-i18n="services_subtitle">Комплексные решения для вашего бизнеса</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_web_title">Веб-разработка</h3>
+                    <p class="service-description" data-i18n="service_web_desc">Корпоративные сайты, интернет-магазины, личные кабинеты, CRM-системы.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_web_feat1">Бэкенд: Python, FastAPI, Django</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_web_feat2">Базы данных: PostgreSQL, MongoDB</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_web_feat3">Адаптивная верстка</span></li>
+                    </ul>
+                </div>
+                <div class="service-card animate-on-scroll delay-100">
+                    <div class="service-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_telegram_title">Telegram-боты</h3>
+                    <p class="service-description" data-i18n="service_telegram_desc">Боты для автоматизации продаж, уведомлений, интеграции с CRM и онлайн-оплатой.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_telegram_feat1">Aiogram / Pyrogram</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_telegram_feat2">Платежные интеграции</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_telegram_feat3">Админ-панели</span></li>
+                    </ul>
+                </div>
+                <div class="service-card animate-on-scroll delay-200">
+                    <div class="service-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_discord_title">Discord-боты</h3>
+                    <p class="service-description" data-i18n="service_discord_desc">Модерация, экономические системы, музыка, ролевые игры для сообществ.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_discord_feat1">Discord.js / py-cord</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_discord_feat2">Системы ролей</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="service_discord_feat3">Интеграция с API</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процесс работы -->
+    <section id="process" class="section section-light">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle-badge" data-i18n="process_badge">Как мы работаем</span>
+                <h2 class="section-title"><span data-i18n="process_title_part1">Процесс</span> <span class="gradient-text" data-i18n="process_title_part2">работы</span></h2>
+                <p class="section-subtitle" data-i18n="process_subtitle">Прозрачный и структурированный подход</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">01</div>
+                    <h4 class="step-title" data-i18n="process_step1">Анализ</h4>
+                    <p class="step-description" data-i18n="process_step1_desc">Изучаем задачу, определяем требования и сроки</p>
+                </div>
+                <div class="process-step animate-on-scroll delay-100">
+                    <div class="step-number">02</div>
+                    <h4 class="step-title" data-i18n="process_step2">Прототипирование</h4>
+                    <p class="step-description" data-i18n="process_step2_desc">Создаем архитектуру и согласовываем ТЗ</p>
+                </div>
+                <div class="process-step animate-on-scroll delay-200">
+                    <div class="step-number">03</div>
+                    <h4 class="step-title" data-i18n="process_step3">Разработка</h4>
+                    <p class="step-description" data-i18n="process_step3_desc">Пишем код с код-ревью и регулярными отчетами</p>
+                </div>
+                <div class="process-step animate-on-scroll delay-300">
+                    <div class="step-number">04</div>
+                    <h4 class="step-title" data-i18n="process_step4">Тестирование</h4>
+                    <p class="step-description" data-i18n="process_step4_desc">Проверяем на ошибки и нагрузку</p>
+                </div>
+                <div class="process-step animate-on-scroll delay-400">
+                    <div class="step-number">05</div>
+                    <h4 class="step-title" data-i18n="process_step5">Запуск</h4>
+                    <p class="step-description" data-i18n="process_step5_desc">Деплоим и передаем документацию</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle-badge" data-i18n="portfolio_badge">Наши работы</span>
+                <h2 class="section-title" data-i18n="portfolio_title">Проекты</h2>
+                <p class="section-subtitle" data-i18n="portfolio_subtitle">Примеры выполненных работ</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Проект 1 -->
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-image">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Guardian Moderation</h3>
+                        <p class="portfolio-description" data-i18n="project1_desc">Discord-бот для модерации сервера с 15 000+ участников</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Discord.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Проект 2 -->
+                <div class="portfolio-card animate-on-scroll delay-100">
+                    <div class="portfolio-image">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Salon Booking Bot</h3>
+                        <p class="portfolio-description" data-i18n="project2_desc">Telegram-бот для записи в салон красоты</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Aiogram</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Проект 3 -->
+                <div class="portfolio-card animate-on-scroll delay-200">
+                    <div class="portfolio-image">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Economy & Games</h3>
+                        <p class="portfolio-description" data-i18n="project3_desc">Discord-бот с экономической системой</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Discord.js</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Проект 4 -->
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-image">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Monitor Bot</h3>
+                        <p class="portfolio-description" data-i18n="project4_desc">Telegram-бот для мониторинга серверов</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Aiogram</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Проект 5 -->
+                <div class="portfolio-card animate-on-scroll delay-100">
+                    <div class="portfolio-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Music Player Bot</h3>
+                        <p class="portfolio-description" data-i18n="project5_desc">Discord-бот для воспроизведения музыки</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Discord.js</span>
+                            <span class="tag">YouTube API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Проект 6 -->
+                <div class="portfolio-card animate-on-scroll delay-200">
+                    <div class="portfolio-image">
+                        <i class="fas fa-poll"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Poll & Survey Bot</h3>
+                        <p class="portfolio-description" data-i18n="project6_desc">Telegram-бот для создания опросов</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Aiogram</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section section-light">
+        <div class="container">
+            <div class="contact-container animate-on-scroll">
+                <div class="contact-info">
+                    <span class="section-subtitle-badge" data-i18n="contact_badge">Свяжитесь с нами</span>
+                    <h2 class="contact-title"><span data-i18n="contact_title_part1">Обсудим</span> <span class="gradient-text" data-i18n="contact_title_part2">ваш проект</span></h2>
+                    <p class="contact-description" data-i18n="contact_description">
+                        Ответим на вопросы и подготовим коммерческое предложение
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="contact-label" data-i18n="contact_email">Email</div>
+                                <div class="contact-value">hello@commitcrew.dev</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div>
+                                <div class="contact-label" data-i18n="contact_telegram">Telegram</div>
+                                <div class="contact-value">@commitcrew_team</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div>
+                                <div class="contact-label" data-i18n="contact_discord">Discord</div>
+                                <div class="contact-value">discord.gg/commitcrew</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма с отправкой в Google Forms -->
+                <form class="contact-form" id="googleForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваше имя" required id="nameField">
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email или Telegram" required id="emailField">
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" placeholder="Опишите ваш проект..." required id="messageField"></textarea>
+                        <i class="fas fa-pencil-alt input-icon textarea-icon"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                        <span data-i18n="contact_submit">Отправить запрос</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <!-- Блок для сообщений пользователю -->
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-accent">Commit</span>Crew
+                </div>
+                <div class="footer-copyright" data-i18n="copyright">
+                    © 2025 Команда разработчиков Commit Crew. Все права защищены.
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollTopBtn" class="scroll-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Скрипт для отправки формы в Google Forms -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('googleForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // ВНИМАНИЕ: ЗАМЕНИТЕ ЭТИ ЗНАЧЕНИЯ НА ВАШИ!
+        // Как получить эти данные - читайте в инструкции README.txt
+        const FORM_ID = 'e/1FAIpQLSeIHJyAB0nh6qNw9TZT49ILieE43QawNPLfHGaGSuMDJWg9GQ'; // ID вашей формы (после /d/ в URL)
+
+        // URL для отправки
+        const FORM_URL = `https://docs.google.com/forms/d/${FORM_ID}/formResponse`;
+
+        // ID полей формы (нужно заменить на ваши!)
+        const FIELD_IDS = {
+            name: 'entry.994595782',      // Замените на ID поля для имени
+            email: 'entry.1492074460',      // Замените на ID поля для email
+            message: 'entry.1523116291'     // Замените на ID поля для сообщения
+        };
+
+        // Устанавливаем правильные атрибуты name для полей
+        const nameField = document.getElementById('nameField');
+        const emailField = document.getElementById('emailField');
+        const messageField = document.getElementById('messageField');
+
+        if (nameField) nameField.name = FIELD_IDS.name;
+        if (emailField) emailField.name = FIELD_IDS.email;
+        if (messageField) messageField.name = FIELD_IDS.message;
+
+        // Обработчик отправки формы
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Проверка заполнения полей
+            if (!nameField.value.trim() || !emailField.value.trim() || !messageField.value.trim()) {
+                formStatus.innerHTML = 'Пожалуйста, заполните все поля';
+                formStatus.style.color = '#ef4444';
+                return;
+            }
+
+            // Блокируем кнопку и показываем статус
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            formStatus.innerHTML = 'Отправка...';
+            formStatus.style.color = '#2563eb';
+
+            // Создаем FormData
+            const formData = new FormData();
+            formData.append(FIELD_IDS.name, nameField.value);
+            formData.append(FIELD_IDS.email, emailField.value);
+            formData.append(FIELD_IDS.message, messageField.value);
+
+            try {
+                // Используем fetch с режимом no-cors для обхода CORS
+                await fetch(FORM_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+
+                // При режиме no-cors мы не можем получить ответ, поэтому предполагаем успех
+                formStatus.innerHTML = '✅ Спасибо! Данные отправлены. Мы свяжемся с вами.';
+                formStatus.style.color = '#10b981';
+
+                // Очищаем форму
+                form.reset();
+
+                // Перенаправляем на страницу благодарности через 1.5 секунды
+                setTimeout(() => {
+                    window.location.href = 'thanks.html';
+                }, 1500);
+
+            } catch (error) {
+                console.error('Ошибка:', error);
+                formStatus.innerHTML = '❌ Ошибка при отправке. Попробуйте позже или напишите нам в Telegram.';
+                formStatus.style.color = '#ef4444';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            }
+        });
+    });
+    </script>
+
+    <!-- Скрипты для перевода, темы и анимаций -->
+    <script>
+    // Объект с переводами для всех 5 языков
+    const translations = {
+        ru: {
+            site_title: "Commit Crew | Команда профессиональных разработчиков",
+            nav_about: "О нас",
+            nav_services: "Услуги",
+            nav_process: "Процесс",
+            nav_portfolio: "Проекты",
+            nav_contact: "Контакты",
+            nav_contact_btn: "Связаться",
+            hero_badge: "Команда профессиональных разработчиков",
+            hero_title_part1: "Commit",
+            hero_title_part2: "Crew",
+            hero_description: "Разрабатываем веб-сервисы, Telegram и Discord ботов под ключ.<br>Полный цикл разработки: от анализа до технической поддержки.",
+            stat_experts: "экспертов в штате",
+            stat_projects: "реализованных проектов",
+            stat_years: "года на рынке",
+            hero_btn_discuss: "Обсудить проект",
+            hero_btn_works: "Наши работы",
+            code_comment: "Готовы к сотрудничеству",
+            about_badge: "Кто мы",
+            about_title_part1: "Наша",
+            about_title_part2: "команда",
+            about_subtitle: "Пять специалистов, каждый отвечает за свое направление",
+            responsibilities: "Зона ответственности:",
+            role_frontend: "Frontend-разработчик",
+            role_frontend_ui: "Frontend-разработчик (UX/UI)",
+            role_backend: "Backend-разработчик",
+            role_backend_integrations: "Backend-разработчик (интеграции)",
+            role_universal: "Универсальный разработчик",
+            bio_stanislav: "Квалифицированный специалист в области фронтенд-разработки с фокусом на создание пользовательских интерфейсов.",
+            resp_stanislav_1: "Разработка клиентской части",
+            resp_stanislav_2: "Кросс-браузерная совместимость",
+            resp_stanislav_3: "Оптимизация интерфейсов",
+            bio_eduard: "Специалист по фронтенд-разработке, уделяющий особое внимание пользовательскому опыту и визуальной составляющей.",
+            resp_eduard_1: "Проектирование UX",
+            resp_eduard_2: "UI/дизайн интерфейсов",
+            resp_eduard_3: "Адаптивная верстка",
+            bio_daniel: "Инженер, специализирующийся на проектировании серверной архитектуры и разработке бекенд-логики.",
+            resp_daniel_1: "Серверная архитектура",
+            resp_daniel_2: "Базы данных",
+            resp_daniel_3: "Разработка API",
+            bio_dmitry: "Разработчик, сосредоточенный на оптимизации серверных процессов и интеграции различных систем.",
+            resp_dmitry_1: "Оптимизация процессов",
+            resp_dmitry_2: "Интеграция систем",
+            resp_dmitry_3: "Настройка инфраструктуры",
+            bio_rostislav: "Универсальный специалист, который подключается к помощи бекенд- и фронтенд-разработке в случаях, когда коллеги не справляются с объемом работ.",
+            resp_rostislav_1: "Помощь бекенд-разработке",
+            resp_rostislav_2: "Помощь фронтенд-разработке",
+            resp_rostislav_3: "Разработка чат-ботов",
+            resp_rostislav_4: "Взаимозаменяемость",
+            tech_badge: "Стек",
+            tech_title_part1: "Технологический",
+            tech_title_part2: "стек",
+            tech_subtitle: "Инструменты, в которых мы эксперты",
+            services_badge: "Что мы делаем",
+            services_title_part1: "Наши",
+            services_title_part2: "услуги",
+            services_subtitle: "Комплексные решения для вашего бизнеса",
+            service_web_title: "Веб-разработка",
+            service_web_desc: "Корпоративные сайты, интернет-магазины, личные кабинеты, CRM-системы.",
+            service_web_feat1: "Бэкенд: Python, FastAPI, Django",
+            service_web_feat2: "Базы данных: PostgreSQL, MongoDB",
+            service_web_feat3: "Адаптивная верстка",
+            service_telegram_title: "Telegram-боты",
+            service_telegram_desc: "Боты для автоматизации продаж, уведомлений, интеграции с CRM и онлайн-оплатой.",
+            service_telegram_feat1: "Aiogram / Pyrogram",
+            service_telegram_feat2: "Платежные интеграции",
+            service_telegram_feat3: "Админ-панели",
+            service_discord_title: "Discord-боты",
+            service_discord_desc: "Модерация, экономические системы, музыка, ролевые игры для сообществ.",
+            service_discord_feat1: "Discord.js / py-cord",
+            service_discord_feat2: "Системы ролей",
+            service_discord_feat3: "Интеграция с API",
+            process_badge: "Как мы работаем",
+            process_title_part1: "Процесс",
+            process_title_part2: "работы",
+            process_subtitle: "Прозрачный и структурированный подход",
+            process_step1: "Анализ",
+            process_step1_desc: "Изучаем задачу, определяем требования и сроки",
+            process_step2: "Прототипирование",
+            process_step2_desc: "Создаем архитектуру и согласовываем ТЗ",
+            process_step3: "Разработка",
+            process_step3_desc: "Пишем код с код-ревью и регулярными отчетами",
+            process_step4: "Тестирование",
+            process_step4_desc: "Проверяем на ошибки и нагрузку",
+            process_step5: "Запуск",
+            process_step5_desc: "Деплоим и передаем документацию",
+            portfolio_badge: "Наши работы",
+            portfolio_title: "Проекты",
+            portfolio_subtitle: "Примеры выполненных работ",
+            project1_desc: "Discord-бот для модерации сервера с 15 000+ участников",
+            project2_desc: "Telegram-бот для записи в салон красоты",
+            project3_desc: "Discord-бот с экономической системой",
+            project4_desc: "Telegram-бот для мониторинга серверов",
+            project5_desc: "Discord-бот для воспроизведения музыки",
+            project6_desc: "Telegram-бот для создания опросов",
+            contact_badge: "Свяжитесь с нами",
+            contact_title_part1: "Обсудим",
+            contact_title_part2: "ваш проект",
+            contact_description: "Ответим на вопросы и подготовим коммерческое предложение",
+            contact_email: "Email",
+            contact_telegram: "Telegram",
+            contact_discord: "Discord",
+            contact_submit: "Отправить запрос",
+            copyright: "© 2025 Команда разработчиков Commit Crew. Все права защищены."
+        },
+        en: {
+            site_title: "Commit Crew | Professional Development Team",
+            nav_about: "About",
+            nav_services: "Services",
+            nav_process: "Process",
+            nav_portfolio: "Projects",
+            nav_contact: "Contact",
+            nav_contact_btn: "Contact",
+            hero_badge: "Professional Development Team",
+            hero_title_part1: "Commit",
+            hero_title_part2: "Crew",
+            hero_description: "We develop web services, Telegram and Discord bots turnkey.<br>Full development cycle: from analysis to technical support.",
+            stat_experts: "experts in team",
+            stat_projects: "completed projects",
+            stat_years: "years on market",
+            hero_btn_discuss: "Discuss project",
+            hero_btn_works: "Our works",
+            code_comment: "Ready to cooperate",
+            about_badge: "Who we are",
+            about_title_part1: "Our",
+            about_title_part2: "team",
+            about_subtitle: "Five specialists, each responsible for their own direction",
+            responsibilities: "Responsibilities:",
+            role_frontend: "Frontend Developer",
+            role_frontend_ui: "Frontend Developer (UX/UI)",
+            role_backend: "Backend Developer",
+            role_backend_integrations: "Backend Developer (integrations)",
+            role_universal: "Universal Developer",
+            bio_stanislav: "Qualified specialist in frontend development with a focus on creating user interfaces.",
+            resp_stanislav_1: "Client-side development",
+            resp_stanislav_2: "Cross-browser compatibility",
+            resp_stanislav_3: "Interface optimization",
+            bio_eduard: "Frontend specialist focusing on user experience and visual design.",
+            resp_eduard_1: "UX design",
+            resp_eduard_2: "UI design",
+            resp_eduard_3: "Responsive layout",
+            bio_daniel: "Engineer specializing in server architecture design and backend logic development.",
+            resp_daniel_1: "Server architecture",
+            resp_daniel_2: "Databases",
+            resp_daniel_3: "API development",
+            bio_dmitry: "Developer focused on optimizing server processes and integrating various systems.",
+            resp_dmitry_1: "Process optimization",
+            resp_dmitry_2: "System integration",
+            resp_dmitry_3: "Infrastructure setup",
+            bio_rostislav: "Universal specialist who helps with backend and frontend development when colleagues can't handle the workload.",
+            resp_rostislav_1: "Backend assistance",
+            resp_rostislav_2: "Frontend assistance",
+            resp_rostislav_3: "Chat bot development",
+            resp_rostislav_4: "Interchangeability",
+            tech_badge: "Stack",
+            tech_title_part1: "Technology",
+            tech_title_part2: "stack",
+            tech_subtitle: "Tools we are experts in",
+            services_badge: "What we do",
+            services_title_part1: "Our",
+            services_title_part2: "services",
+            services_subtitle: "Comprehensive solutions for your business",
+            service_web_title: "Web Development",
+            service_web_desc: "Corporate websites, online stores, personal accounts, CRM systems.",
+            service_web_feat1: "Backend: Python, FastAPI, Django",
+            service_web_feat2: "Databases: PostgreSQL, MongoDB",
+            service_web_feat3: "Responsive layout",
+            service_telegram_title: "Telegram Bots",
+            service_telegram_desc: "Bots for sales automation, notifications, CRM integration and online payments.",
+            service_telegram_feat1: "Aiogram / Pyrogram",
+            service_telegram_feat2: "Payment integrations",
+            service_telegram_feat3: "Admin panels",
+            service_discord_title: "Discord Bots",
+            service_discord_desc: "Moderation, economy systems, music, role-playing games for communities.",
+            service_discord_feat1: "Discord.js / py-cord",
+            service_discord_feat2: "Role systems",
+            service_discord_feat3: "API integration",
+            process_badge: "How we work",
+            process_title_part1: "Work",
+            process_title_part2: "process",
+            process_subtitle: "Transparent and structured approach",
+            process_step1: "Analysis",
+            process_step1_desc: "Study the task, define requirements and deadlines",
+            process_step2: "Prototyping",
+            process_step2_desc: "Create architecture and approve specifications",
+            process_step3: "Development",
+            process_step3_desc: "Write code with code review and regular reports",
+            process_step4: "Testing",
+            process_step4_desc: "Check for errors and load testing",
+            process_step5: "Launch",
+            process_step5_desc: "Deploy and provide documentation",
+            portfolio_badge: "Our works",
+            portfolio_title: "Projects",
+            portfolio_subtitle: "Examples of completed works",
+            project1_desc: "Discord bot for server moderation with 15,000+ members",
+            project2_desc: "Telegram bot for beauty salon booking",
+            project3_desc: "Discord bot with economy system",
+            project4_desc: "Telegram bot for server monitoring",
+            project5_desc: "Discord bot for music playback",
+            project6_desc: "Telegram bot for creating polls",
+            contact_badge: "Contact us",
+            contact_title_part1: "Discuss",
+            contact_title_part2: "your project",
+            contact_description: "We'll answer your questions and prepare a commercial proposal",
+            contact_email: "Email",
+            contact_telegram: "Telegram",
+            contact_discord: "Discord",
+            contact_submit: "Send request",
+            copyright: "© 2025 Commit Crew development team. All rights reserved."
+        },
+        sv: {
+            site_title: "Commit Crew | Professionellt utvecklingsteam",
+            nav_about: "Om oss",
+            nav_services: "Tjänster",
+            nav_process: "Process",
+            nav_portfolio: "Projekt",
+            nav_contact: "Kontakt",
+            nav_contact_btn: "Kontakta",
+            hero_badge: "Professionellt utvecklingsteam",
+            hero_title_part1: "Commit",
+            hero_title_part2: "Crew",
+            hero_description: "Vi utvecklar webbtjänster, Telegram- och Discord-bottar nyckelfärdigt.<br>Hela utvecklingscykeln: från analys till teknisk support.",
+            stat_experts: "experter i teamet",
+            stat_projects: "slutförda projekt",
+            stat_years: "år på marknaden",
+            hero_btn_discuss: "Diskutera projekt",
+            hero_btn_works: "Våra arbeten",
+            code_comment: "Redo att samarbeta",
+            about_badge: "Vilka vi är",
+            about_title_part1: "Vårt",
+            about_title_part2: "team",
+            about_subtitle: "Fem specialister, var och en ansvarig för sitt område",
+            responsibilities: "Ansvarområden:",
+            role_frontend: "Frontend-utvecklare",
+            role_frontend_ui: "Frontend-utvecklare (UX/UI)",
+            role_backend: "Backend-utvecklare",
+            role_backend_integrations: "Backend-utvecklare (integrationer)",
+            role_universal: "Universalutvecklare",
+            bio_stanislav: "Kvalificerad specialist inom frontend-utveckling med fokus på att skapa användargränssnitt.",
+            resp_stanislav_1: "Klientutveckling",
+            resp_stanislav_2: "Cross-browser kompatibilitet",
+            resp_stanislav_3: "Gränssnittsoptimering",
+            bio_eduard: "Frontend-specialist med fokus på användarupplevelse och visuell design.",
+            resp_eduard_1: "UX-design",
+            resp_eduard_2: "UI-design",
+            resp_eduard_3: "Responsiv layout",
+            bio_daniel: "Ingenjör specialiserad på serverarkitektur och backend-logik.",
+            resp_daniel_1: "Serverarkitektur",
+            resp_daniel_2: "Databaser",
+            resp_daniel_3: "API-utveckling",
+            bio_dmitry: "Utvecklare fokuserad på att optimera serverprocesser och integrera olika system.",
+            resp_dmitry_1: "Processoptimering",
+            resp_dmitry_2: "Systemintegration",
+            resp_dmitry_3: "Infrastrukturkonfiguration",
+            bio_rostislav: "Universalspecialist som hjälper till med backend- och frontend-utveckling när kollegor inte kan hantera arbetsbelastningen.",
+            resp_rostislav_1: "Backend-hjälp",
+            resp_rostislav_2: "Frontend-hjälp",
+            resp_rostislav_3: "Chatbottutveckling",
+            resp_rostislav_4: "Utbytbarhet",
+            tech_badge: "Stack",
+            tech_title_part1: "Teknologi",
+            tech_title_part2: "stack",
+            tech_subtitle: "Verktyg vi är experter på",
+            services_badge: "Vad vi gör",
+            services_title_part1: "Våra",
+            services_title_part2: "tjänster",
+            services_subtitle: "Kompletta lösningar för ditt företag",
+            service_web_title: "Webbutveckling",
+            service_web_desc: "Företagswebbplatser, webbutiker, personliga konton, CRM-system.",
+            service_web_feat1: "Backend: Python, FastAPI, Django",
+            service_web_feat2: "Databaser: PostgreSQL, MongoDB",
+            service_web_feat3: "Responsiv layout",
+            service_telegram_title: "Telegram-bottar",
+            service_telegram_desc: "Bottar för automatisering av försäljning, notifieringar, CRM-integration och onlinebetalningar.",
+            service_telegram_feat1: "Aiogram / Pyrogram",
+            service_telegram_feat2: "Betalningsintegrationer",
+            service_telegram_feat3: "Adminpaneler",
+            service_discord_title: "Discord-bottar",
+            service_discord_desc: "Moderering, ekonomisystem, musik, rollspel för gemenskaper.",
+            service_discord_feat1: "Discord.js / py-cord",
+            service_discord_feat2: "Rollsystem",
+            service_discord_feat3: "API-integration",
+            process_badge: "Hur vi arbetar",
+            process_title_part1: "Arbets",
+            process_title_part2: "process",
+            process_subtitle: "Transparent och strukturerad metod",
+            process_step1: "Analys",
+            process_step1_desc: "Studera uppgiften, definiera krav och deadlines",
+            process_step2: "Prototyping",
+            process_step2_desc: "Skapa arkitektur och godkänna specifikationer",
+            process_step3: "Utveckling",
+            process_step3_desc: "Skriva kod med kodgranskning och regelbundna rapporter",
+            process_step4: "Testning",
+            process_step4_desc: "Kontrollera fel och belastningstestning",
+            process_step5: "Lansering",
+            process_step5_desc: "Driftsättning och dokumentation",
+            portfolio_badge: "Våra arbeten",
+            portfolio_title: "Projekt",
+            portfolio_subtitle: "Exempel på slutförda arbeten",
+            project1_desc: "Discord-bot för servermoderering med 15 000+ medlemmar",
+            project2_desc: "Telegram-bot för skönhetssalongsbokning",
+            project3_desc: "Discord-bot med ekonomisystem",
+            project4_desc: "Telegram-bot för serverövervakning",
+            project5_desc: "Discord-bot för musikuppspelning",
+            project6_desc: "Telegram-bot för att skapa omröstningar",
+            contact_badge: "Kontakta oss",
+            contact_title_part1: "Diskutera",
+            contact_title_part2: "ditt projekt",
+            contact_description: "Vi svarar på dina frågor och förbereder ett kommersiellt förslag",
+            contact_email: "E-post",
+            contact_telegram: "Telegram",
+            contact_discord: "Discord",
+            contact_submit: "Skicka förfrågan",
+            copyright: "© 2025 Commit Crew utvecklingsteam. Alla rättigheter förbehållna."
+        },
+        uk: {
+            site_title: "Commit Crew | Команда професійних розробників",
+            nav_about: "Про нас",
+            nav_services: "Послуги",
+            nav_process: "Процес",
+            nav_portfolio: "Проєкти",
+            nav_contact: "Контакти",
+            nav_contact_btn: "Зв'язатися",
+            hero_badge: "Команда професійних розробників",
+            hero_title_part1: "Commit",
+            hero_title_part2: "Crew",
+            hero_description: "Розробляємо веб-сервіси, Telegram та Discord ботів під ключ.<br>Повний цикл розробки: від аналізу до технічної підтримки.",
+            stat_experts: "експертів у штаті",
+            stat_projects: "реалізованих проєктів",
+            stat_years: "роки на ринку",
+            hero_btn_discuss: "Обговорити проєкт",
+            hero_btn_works: "Наші роботи",
+            code_comment: "Готові до співпраці",
+            about_badge: "Хто ми",
+            about_title_part1: "Наша",
+            about_title_part2: "команда",
+            about_subtitle: "П'ять спеціалістів, кожен відповідає за свій напрямок",
+            responsibilities: "Зона відповідальності:",
+            role_frontend: "Frontend-розробник",
+            role_frontend_ui: "Frontend-розробник (UX/UI)",
+            role_backend: "Backend-розробник",
+            role_backend_integrations: "Backend-розробник (інтеграції)",
+            role_universal: "Універсальний розробник",
+            bio_stanislav: "Кваліфікований спеціаліст у галузі фронтенд-розробки з фокусом на створення користувацьких інтерфейсів.",
+            resp_stanislav_1: "Розробка клієнтської частини",
+            resp_stanislav_2: "Крос-браузерна сумісність",
+            resp_stanislav_3: "Оптимізація інтерфейсів",
+            bio_eduard: "Спеціаліст з фронтенд-розробки, який приділяє особливу увагу користувацькому досвіду та візуальній складовій.",
+            resp_eduard_1: "Проектування UX",
+            resp_eduard_2: "UI/дизайн інтерфейсів",
+            resp_eduard_3: "Адаптивна верстка",
+            bio_daniel: "Інженер, який спеціалізується на проектуванні серверної архітектури та розробці бекенд-логіки.",
+            resp_daniel_1: "Серверна архітектура",
+            resp_daniel_2: "Бази даних",
+            resp_daniel_3: "Розробка API",
+            bio_dmitry: "Розробник, зосереджений на оптимізації серверних процесів та інтеграції різних систем.",
+            resp_dmitry_1: "Оптимізація процесів",
+            resp_dmitry_2: "Інтеграція систем",
+            resp_dmitry_3: "Налаштування інфраструктури",
+            bio_rostislav: "Універсальний спеціаліст, який допомагає з бекенд- та фронтенд-розробкою, коли колеги не справляються з обсягом робіт.",
+            resp_rostislav_1: "Допомога бекенд-розробці",
+            resp_rostislav_2: "Допомога фронтенд-розробці",
+            resp_rostislav_3: "Розробка чат-ботів",
+            resp_rostislav_4: "Взаємозамінність",
+            tech_badge: "Стек",
+            tech_title_part1: "Технологічний",
+            tech_title_part2: "стек",
+            tech_subtitle: "Інструменти, в яких ми експерти",
+            services_badge: "Що ми робимо",
+            services_title_part1: "Наші",
+            services_title_part2: "послуги",
+            services_subtitle: "Комплексні рішення для вашого бізнесу",
+            service_web_title: "Веб-розробка",
+            service_web_desc: "Корпоративні сайти, інтернет-магазини, особисті кабінети, CRM-системи.",
+            service_web_feat1: "Бекенд: Python, FastAPI, Django",
+            service_web_feat2: "Бази даних: PostgreSQL, MongoDB",
+            service_web_feat3: "Адаптивна верстка",
+            service_telegram_title: "Telegram-боти",
+            service_telegram_desc: "Боти для автоматизації продажів, сповіщень, інтеграції з CRM та онлайн-оплатою.",
+            service_telegram_feat1: "Aiogram / Pyrogram",
+            service_telegram_feat2: "Платіжні інтеграції",
+            service_telegram_feat3: "Адмін-панелі",
+            service_discord_title: "Discord-боти",
+            service_discord_desc: "Модерація, економічні системи, музика, рольові ігри для спільнот.",
+            service_discord_feat1: "Discord.js / py-cord",
+            service_discord_feat2: "Системи ролей",
+            service_discord_feat3: "Інтеграція з API",
+            process_badge: "Як ми працюємо",
+            process_title_part1: "Процес",
+            process_title_part2: "роботи",
+            process_subtitle: "Прозорий та структурований підхід",
+            process_step1: "Аналіз",
+            process_step1_desc: "Вивчаємо завдання, визначаємо вимоги та терміни",
+            process_step2: "Прототипування",
+            process_step2_desc: "Створюємо архітектуру та узгоджуємо ТЗ",
+            process_step3: "Розробка",
+            process_step3_desc: "Пишемо код з код-рев'ю та регулярними звітами",
+            process_step4: "Тестування",
+            process_step4_desc: "Перевіряємо на помилки та навантаження",
+            process_step5: "Запуск",
+            process_step5_desc: "Розгортаємо та передаємо документацію",
+            portfolio_badge: "Наші роботи",
+            portfolio_title: "Проєкти",
+            portfolio_subtitle: "Приклади виконаних робіт",
+            project1_desc: "Discord-бот для модерації сервера з 15 000+ учасників",
+            project2_desc: "Telegram-бот для запису до салону краси",
+            project3_desc: "Discord-бот з економічною системою",
+            project4_desc: "Telegram-бот для моніторингу серверів",
+            project5_desc: "Discord-бот для відтворення музики",
+            project6_desc: "Telegram-бот для створення опитувань",
+            contact_badge: "Зв'яжіться з нами",
+            contact_title_part1: "Обговоримо",
+            contact_title_part2: "ваш проєкт",
+            contact_description: "Відповімо на питання та підготуємо комерційну пропозицію",
+            contact_email: "Email",
+            contact_telegram: "Telegram",
+            contact_discord: "Discord",
+            contact_submit: "Надіслати запит",
+            copyright: "© 2025 Команда розробників Commit Crew. Всі права захищені."
+        },
+        de: {
+            site_title: "Commit Crew | Professionelles Entwicklungsteam",
+            nav_about: "Über uns",
+            nav_services: "Dienstleistungen",
+            nav_process: "Prozess",
+            nav_portfolio: "Projekte",
+            nav_contact: "Kontakt",
+            nav_contact_btn: "Kontakt",
+            hero_badge: "Professionelles Entwicklungsteam",
+            hero_title_part1: "Commit",
+            hero_title_part2: "Crew",
+            hero_description: "Wir entwickeln Webdienste, Telegram- und Discord-Bots schlüsselfertig.<br>Vollständiger Entwicklungszyklus: von der Analyse bis zum technischen Support.",
+            stat_experts: "Experten im Team",
+            stat_projects: "abgeschlossene Projekte",
+            stat_years: "Jahre auf dem Markt",
+            hero_btn_discuss: "Projekt besprechen",
+            hero_btn_works: "Unsere Arbeiten",
+            code_comment: "Bereit zur Zusammenarbeit",
+            about_badge: "Wer wir sind",
+            about_title_part1: "Unser",
+            about_title_part2: "Team",
+            about_subtitle: "Fünf Spezialisten, jeder verantwortlich für seinen Bereich",
+            responsibilities: "Verantwortungsbereich:",
+            role_frontend: "Frontend-Entwickler",
+            role_frontend_ui: "Frontend-Entwickler (UX/UI)",
+            role_backend: "Backend-Entwickler",
+            role_backend_integrations: "Backend-Entwickler (Integrationen)",
+            role_universal: "Universalentwickler",
+            bio_stanislav: "Qualifizierter Spezialist für Frontend-Entwicklung mit Fokus auf Benutzeroberflächen.",
+            resp_stanislav_1: "Clientseitige Entwicklung",
+            resp_stanislav_2: "Cross-Browser-Kompatibilität",
+            resp_stanislav_3: "Schnittstellenoptimierung",
+            bio_eduard: "Frontend-Spezialist mit Fokus auf Benutzererfahrung und visuelles Design.",
+            resp_eduard_1: "UX-Design",
+            resp_eduard_2: "UI-Design",
+            resp_eduard_3: "Responsives Layout",
+            bio_daniel: "Ingenieur spezialisiert auf Serverarchitektur und Backend-Logik.",
+            resp_daniel_1: "Serverarchitektur",
+            resp_daniel_2: "Datenbanken",
+            resp_daniel_3: "API-Entwicklung",
+            bio_dmitry: "Entwickler fokussiert auf Optimierung von Serverprozessen und Integration verschiedener Systeme.",
+            resp_dmitry_1: "Prozessoptimierung",
+            resp_dmitry_2: "Systemintegration",
+            resp_dmitry_3: "Infrastruktureinrichtung",
+            bio_rostislav: "Universalspezialist, der bei Backend- und Frontend-Entwicklung hilft, wenn Kollegen mit dem Arbeitspensum nicht zurechtkommen.",
+            resp_rostislav_1: "Backend-Unterstützung",
+            resp_rostislav_2: "Frontend-Unterstützung",
+            resp_rostislav_3: "Chat-Bot-Entwicklung",
+            resp_rostislav_4: "Austauschbarkeit",
+            tech_badge: "Stack",
+            tech_title_part1: "Technologie",
+            tech_title_part2: "Stack",
+            tech_subtitle: "Werkzeuge, in denen wir Experten sind",
+            services_badge: "Was wir tun",
+            services_title_part1: "Unsere",
+            services_title_part2: "Dienstleistungen",
+            services_subtitle: "Umfassende Lösungen für Ihr Unternehmen",
+            service_web_title: "Webentwicklung",
+            service_web_desc: "Unternehmenswebsites, Online-Shops, persönliche Konten, CRM-Systeme.",
+            service_web_feat1: "Backend: Python, FastAPI, Django",
+            service_web_feat2: "Datenbanken: PostgreSQL, MongoDB",
+            service_web_feat3: "Responsives Layout",
+            service_telegram_title: "Telegram-Bots",
+            service_telegram_desc: "Bots für Verkaufsautomatisierung, Benachrichtigungen, CRM-Integration und Online-Zahlungen.",
+            service_telegram_feat1: "Aiogram / Pyrogram",
+            service_telegram_feat2: "Zahlungsintegrationen",
+            service_telegram_feat3: "Admin-Panels",
+            service_discord_title: "Discord-Bots",
+            service_discord_desc: "Moderation, Wirtschaftssysteme, Musik, Rollenspiele für Communities.",
+            service_discord_feat1: "Discord.js / py-cord",
+            service_discord_feat2: "Rollensysteme",
+            service_discord_feat3: "API-Integration",
+            process_badge: "Wie wir arbeiten",
+            process_title_part1: "Arbeits",
+            process_title_part2: "prozess",
+            process_subtitle: "Transparenter und strukturierter Ansatz",
+            process_step1: "Analyse",
+            process_step1_desc: "Aufgabe studieren, Anforderungen und Fristen festlegen",
+            process_step2: "Prototyping",
+            process_step2_desc: "Architektur erstellen und Pflichtenheft abstimmen",
+            process_step3: "Entwicklung",
+            process_step3_desc: "Code schreiben mit Code-Review und regelmäßigen Berichten",
+            process_step4: "Testen",
+            process_step4_desc: "Auf Fehler und Last prüfen",
+            process_step5: "Start",
+            process_step5_desc: "Bereitstellen und Dokumentation übergeben",
+            portfolio_badge: "Unsere Arbeiten",
+            portfolio_title: "Projekte",
+            portfolio_subtitle: "Beispiele abgeschlossener Arbeiten",
+            project1_desc: "Discord-Bot für Server-Moderation mit 15.000+ Mitgliedern",
+            project2_desc: "Telegram-Bot für Schönheitssalon-Buchungen",
+            project3_desc: "Discord-Bot mit Wirtschaftssystem",
+            project4_desc: "Telegram-Bot für Server-Überwachung",
+            project5_desc: "Discord-Bot für Musikwiedergabe",
+            project6_desc: "Telegram-Bot zum Erstellen von Umfragen",
+            contact_badge: "Kontaktieren Sie uns",
+            contact_title_part1: "Besprechen Sie",
+            contact_title_part2: "Ihr Projekt",
+            contact_description: "Wir beantworten Ihre Fragen und erstellen ein kommerzielles Angebot",
+            contact_email: "E-Mail",
+            contact_telegram: "Telegram",
+            contact_discord: "Discord",
+            contact_submit: "Anfrage senden",
+            copyright: "© 2025 Commit Crew Entwicklungsteam. Alle Rechte vorbehalten."
+        }
+    };
+
+    // Функция для применения перевода
+    function translatePage(lang) {
+        console.log('Applying translation for:', lang);
+
+        // Проверяем, есть ли переводы для выбранного языка
+        if (!translations[lang]) {
+            console.error('No translations found for language:', lang);
+            lang = 'ru';
+        }
+
+        // Переводим все элементы с атрибутом data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                if (element.tagName === 'TITLE') {
+                    element.textContent = translations[lang][key];
+                } else if (element.placeholder !== undefined) {
+                    element.placeholder = translations[lang][key];
+                } else {
+                    element.innerHTML = translations[lang][key];
+                }
+            }
+        });
+
+        // Обновляем атрибут lang у HTML
+        document.documentElement.lang = lang;
+
+        // Обновляем текущий язык в переключателе
+        const currentLangSpan = document.querySelector('.current-language');
+        if (currentLangSpan) {
+            const langMap = { ru: 'RU', en: 'EN', sv: 'SV', uk: 'UA', de: 'DE' };
+            currentLangSpan.textContent = langMap[lang] || 'RU';
+        }
+    }
+
+    // Переключение языка
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageToggle = document.getElementById('languageToggle');
+        const languageDropdown = document.getElementById('languageDropdown');
+
+        if (languageToggle && languageDropdown) {
+            languageToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const lang = option.getAttribute('data-lang');
+                    translatePage(lang);
+                    localStorage.setItem('language', lang);
+                    languageDropdown.classList.remove('active');
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
+                    languageDropdown.classList.remove('active');
+                }
+            });
+
+            const savedLang = localStorage.getItem('language') || 'ru';
+            translatePage(savedLang);
+        }
+    });
+
+    // Переключение темы
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.setAttribute('data-theme', savedTheme);
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            if (body.hasAttribute('data-theme')) {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    }
+
+    // Прелоадер
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.querySelector('.preloader').classList.add('hidden');
+        }, 500);
+    });
+
+    // Скролл анимации
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Кнопка "Наверх"
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Мобильное меню
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+    }
+
+    // Плавный скролл для якорей
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                if (nav) nav.classList.remove('active');
+                if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
+            }
+        });
+    });
+
+    // Простая анимация частиц на фоне
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        if (!particlesContainer) return;
+
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particle.style.animationDelay = (Math.random() * 5) + 's';
+            particle.style.width = (Math.random() * 3 + 1) + 'px';
+            particle.style.height = particle.style.width;
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    createParticles();
+    </script>
+</body>
+</html>
